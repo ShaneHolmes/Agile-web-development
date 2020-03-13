@@ -1,17 +1,11 @@
-package com.shane.pook;
+package com.shane.poker;
 
 import java.util.Arrays;
 import java.util.Comparator;
 import java.util.HashMap;
 import java.util.Map;
 
-public class Pook {
-    public static void main(String[] args) {
-        Pook pook = new Pook();
-        System.out.println(pook.match("2H 3D 5S 9C KD", "2C 3H 4S 8C AH"));
-        System.out.println(pook.match("2H 4S 4C 2D 4H", "2S 8S AS QS 3S"));
-        System.out.println(pook.match("2H 3D 5S 9C KD", "2C 3H 4S 8C KH"));
-    }
+public class Poker {
 
     private Map<Character, Integer> map;
     private class MyComparator implements Comparator<String> {
@@ -22,7 +16,7 @@ public class Pook {
         }
     }
 
-    public Pook() {
+    public Poker() {
         map = new HashMap<>();
         map.put('2', 1);
         map.put('3', 2);
