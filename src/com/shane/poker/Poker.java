@@ -39,9 +39,15 @@ public class Poker {
         String[] whites = white.split("\\s+");
         Arrays.sort(blacks, new MyComparator());
         Arrays.sort(whites, new MyComparator());
+//        for (String b : blacks) {
+//            System.out.print(b+" ");
+//        }
+
+        //System.out.println(whites);
 
         int blackType = getType(blacks);
         int whiteType = getType(whites);
+        //System.out.println(blackType+" "+whiteType);
         if (blackType > whiteType)
             return 1;
         else if (blackType < whiteType)
@@ -275,8 +281,10 @@ public class Poker {
 
         //判断是否为三条
         for (char key : map.keySet()) {
-            if (map.get(key) == 3)
+            if (map.get(key) == 3){
+                System.out.println(key);
                 return 4;
+            }
         }
 
         //判断是否为两对
@@ -291,8 +299,10 @@ public class Poker {
 
         //判断是否为对子
         for (char key : map.keySet()) {
-            if (map.get(key) == 2) {
+            if (map.get(key) == 2) {{
+                System.out.println(key);
                 return 2;
+            }
             }
         }
 
